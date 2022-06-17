@@ -36,7 +36,7 @@
 		left {
 			bindings = <
 				&kp N1 &kp N2 &kp N3 &kp N4 &kp N5                    &kp N6 &kp N7 &kp N8 &kp N9 &kp N0
-				&kp BSPC &kp DEL &none &none &none                    &kp SQT &kp MINUS &kp EQUAL &kp LBRC &kp RBKT
+				&kp BSPC &kp DEL &none &none &none                    &kp SQT &kp MINUS &kp EQUAL &kp LBKT &kp RBKT
 				&sk LCTRL &sk LGUI &sk LALT &none &none               &kp GRAVE &none &none &none &kp BSLH
 					                 &trans &trans                    &trans &trans
 			>;
