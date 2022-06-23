@@ -38,10 +38,10 @@
 
         Symbols {
             bindings = <
-    &kp N1    &kp N2    &kp N3    &kp N4  &kp N5           &kp N6     &kp N7     &kp N8    &kp N9    &kp N0
-     &none     &none   &kp DEL  &kp BSPC   &none          &kp SQT  &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT
- &sk LCTRL  &sk LGUI  &sk LALT     &none   &none            &none  &kp GRAVE      &none     &none  &kp BSLH
-                                  &trans  &trans           &trans     &trans
+    &kp N1    &kp N2    &kp N3   &kp N4  &kp N5           &kp N6     &kp N7     &kp N8    &kp N9    &kp N0
+     &none     &none  &kp BSPC  &kp DEL   &none          &kp SQT  &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT
+ &sk LCTRL  &sk LGUI  &sk LALT    &none   &none            &none  &kp GRAVE      &none     &none  &kp BSLH
+                                 &trans  &trans           &trans     &trans
             >;
         };
 
