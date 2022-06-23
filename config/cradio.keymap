@@ -24,10 +24,44 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        tab {
+            bindings = <&kp TAB>;
+            key-positions = <10 11>;
+            layers = <0 1 2>;
+        };
+
+        escape {
+            bindings = <&kp ESC>;
+            key-positions = <0 1>;
+            layers = <0 1 2>;
+        };
+
+        backspace {
+            bindings = <&kp BSPC>;
+            key-positions = <8 9>;
+            layers = <0 1 2>;
+        };
+
+        delete {
+            bindings = <&kp DEL>;
+            key-positions = <8 7>;
+            layers = <0 1 2>;
+        };
+
+        enter {
+            bindings = <&kp RET>;
+            key-positions = <19 18>;
+            layers = <1 0 2>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
-        colemak {
+        Colemak {
             bindings = <
        &kp Q       &kp W       &kp F   &kp P       &kp B              &kp J   &kp L           &kp U         &kp Y        &kp SEMI
        &kp A       &kp R       &kp S   &kp T       &kp G              &kp M   &kp N           &kp E         &kp I           &kp O
@@ -40,7 +74,7 @@
             bindings = <
     &kp N1    &kp N2    &kp N3   &kp N4  &kp N5           &kp N6     &kp N7     &kp N8    &kp N9    &kp N0
      &none     &none  &kp BSPC  &kp DEL   &none          &kp SQT  &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT
- &sk LCTRL  &sk LGUI  &sk LALT    &none   &none            &none  &kp GRAVE      &none     &none  &kp BSLH
+ &sk LCTRL  &sk LGUI  &sk LALT    &none   &none            &none  &kp GRAVE  &kp COMMA   &kp DOT  &kp BSLH
                                  &trans  &trans           &trans     &trans
             >;
         };
@@ -63,7 +97,7 @@
             >;
         };
 
-        gaming {
+        Gaming {
             bindings = <
     &kp TAB   &kp Q   &kp W   &kp E      &kp R              &none     &none    &kp UP      &none    &kp DEL
  &kp LSHIFT   &kp A   &kp S   &kp D      &kp F            &kp TAB  &kp LEFT  &kp DOWN  &kp RIGHT   &kp BSPC
@@ -72,7 +106,7 @@
             >;
         };
 
-        gaming_raise {
+        Gaming_raise {
             bindings = <
  &kp ESC  &kp N1  &kp N2  &kp N3  &kp N4           &to 0  &trans  &trans  &trans  &trans
   &kp N5  &kp N6  &kp N7  &kp N8  &kp N9          &trans  &trans  &trans  &trans  &trans
