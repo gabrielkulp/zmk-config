@@ -26,35 +26,16 @@
 
     combos {
         compatible = "zmk,combos";
+    };
 
-        tab {
-            bindings = <&kp ESC>;
-            key-positions = <0 1>;
-            layers = <0 1 2>;
-        };
-
-        escape {
-            bindings = <&kp TAB>;
-            key-positions = <10 11>;
-            layers = <0 1 2>;
-        };
-
-        backspace {
-            bindings = <&kp BSPC>;
-            key-positions = <12 13>;
-            layers = <0 1 2>;
-        };
-
-        delete {
-            bindings = <&kp DEL>;
-            key-positions = <16 17>;
-            layers = <0 1 2>;
-        };
-
-        enter {
-            bindings = <&kp RET>;
-            key-positions = <19 18>;
-            layers = <1 0 2>;
+    macros {
+        test_macro: test_macro {
+            compatible = "zmk,behavior-macro";
+            label = "new_macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp H &kp E &kp L &kp L &kp O>;
         };
     };
 
@@ -90,7 +71,7 @@
 
         Extra {
             bindings = <
- &kp F1   &kp F2   &kp F3   &kp F4        &none                 &to 4  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2    &bt BT_CLR
+ &kp F1   &kp F2   &kp F3   &kp F4  &test macro                 &to 4  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2    &bt BT_CLR
  &kp F5   &kp F6   &kp F7   &kp F8        &none          &out OUT_TOG  &kp C_BRI_DN  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_BRI_UP
  &kp F9  &kp F10  &kp F11  &kp F12  &bootloader           &bootloader         &none         &none         &none         &none
                             &trans       &trans                &trans        &trans
