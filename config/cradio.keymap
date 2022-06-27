@@ -72,17 +72,17 @@
 
         Symbols {
             bindings = <
-    &kp N1    &kp N2    &kp N3  &kp N4  &kp N5           &kp N6     &kp N7     &kp N8    &kp N9    &kp N0
-     &none     &none     &none   &none   &none          &kp SQT  &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT
- &sk LCTRL  &sk LGUI  &sk LALT   &none   &none            &none  &kp GRAVE  &kp COMMA   &kp DOT  &kp BSLH
-                                &trans  &trans           &trans     &trans
+    &kp N1    &kp N2    &kp N3    &kp N4  &kp N5           &kp N6     &kp N7     &kp N8    &kp N9    &kp N0
+     &none     &none   &kp DEL  &kp BSPC   &none          &kp SQT  &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT
+ &sk LCTRL  &sk LGUI  &sk LALT     &none   &none            &none  &kp GRAVE  &kp COMMA   &kp DOT  &kp BSLH
+                                  &trans  &trans           &trans     &trans
             >;
         };
 
         Navigation {
             bindings = <
-     &none     &none     &none   &none   &none          &kp PG_UP     &none    &kp UP      &none  &kp K_CMENU
-     &none     &none     &none   &none   &none          &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT        &none
+   &kp ESC     &none     &none   &none   &none          &kp PG_UP     &none    &kp UP      &none  &kp K_CMENU
+   &kp TAB     &none     &none   &none   &none          &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT      &kp RET
  &kp LCTRL  &kp LGUI  &kp LALT   &none   &none              &none  &kp HOME   &kp END      &none        &none
                                 &trans  &trans             &trans    &trans
             >;
