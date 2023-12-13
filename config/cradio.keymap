@@ -29,6 +29,23 @@
     };
 
     macros {
+        new_sentence: new_sentence {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp PERIOD &kp SPACE &sk LEFT_SHIFT>;
+            label = "NEW_SENTENCE";
+        };
+    };
+
+    behaviors {
+        kp_repeat: kp_repeat {
+            compatible = "zmk,behavior-hold-tap";
+            label = "KP_REPEAT";
+            bindings = <&kp>, <&key_repeat>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
     };
 
     keymap {
@@ -36,19 +53,19 @@
 
         Colemak {
             bindings = <
-&kp Q        &kp W       &kp F       &kp P  &kp B                      &kp J      &kp L        &kp U           &kp Y         &kp SEMI
-&kp A        &kp R       &kp S       &kp T  &kp G                      &kp M      &kp N        &kp E           &kp I         &kp O
-&mt LCTRL Z  &mt LGUI X  &mt LALT C  &kp D  &kp V                      &kp K      &kp H        &mt RALT COMMA  &mt RGUI DOT  &mt RCTRL SLASH
-                                     &mo 1  &mt LEFT_SHIFT C_REPEAT    &kp SPACE  &lt 2 SPACE
+&kp Q        &kp W       &kp F       &kp P  &kp B                      &kp J      &kp L  &kp U           &kp Y         &kp SEMI
+&kp A        &kp R       &kp S       &kp T  &kp G                      &kp M      &kp N  &kp E           &kp I         &kp O
+&mt LCTRL Z  &mt LGUI X  &mt LALT C  &kp D  &kp V                      &kp K      &kp H  &mt RALT COMMA  &mt RGUI DOT  &mt RCTRL SLASH
+                                     &mo 1  &kp_repeat LEFT_SHIFT 0    &kp SPACE  &mo 2
             >;
         };
 
         Symbols {
             bindings = <
-&kp N1     &kp N2    &kp N3    &kp N4   &kp N5    &kp N6   &kp N7     &kp N8     &kp N9    &kp N0
-&none      &none     &kp BSPC  &kp DEL  &none     &kp SQT  &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT
-&sk LCTRL  &sk LGUI  &sk LALT  &kp TAB  &none     &none    &kp GRAVE  &kp COMMA  &kp DOT   &kp BSLH
-                               &trans   &trans    &trans   &trans
+&kp N1     &kp N2    &kp N3    &kp N4   &kp N5    &kp N6         &kp N7     &kp N8     &kp N9    &kp N0
+&none      &none     &kp BSPC  &kp DEL  &none     &kp SQT        &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT
+&sk LCTRL  &sk LGUI  &sk LALT  &kp TAB  &none     &none          &kp GRAVE  &kp COMMA  &kp DOT   &kp BSLH
+                               &trans   &trans    &new_sentence  &trans
             >;
         };
 
